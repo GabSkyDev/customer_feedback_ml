@@ -84,14 +84,14 @@ def avaliar_modelo(modelo, X_teste, y_teste):
     }
 
 
-def salvar_modelo(modelo, caminho_arquivo='models/model_feeedback.pkl'):
+def salvar_modelo(modelo, caminho_arquivo='models/modelo_feedback.pkl'):
     os.makedirs(os.path.dirname(caminho_arquivo), exist_ok=True)
     joblib.dump(modelo, caminho_arquivo)
     print(f"Modelo salvo com sucesso em: {caminho_arquivo}")
     return caminho_arquivo
 
 
-def carregar_modelo(caminho_arquivo='models/model_feedbaack.pkl'):
+def carregar_modelo(caminho_arquivo='models/modelo_feedback.pkl'):
     if not os.path.exists(caminho_arquivo):
         raise FileNotFoundError(f"Arquivo de modelo não encontrado: {caminho_arquivo}")
     
